@@ -1,12 +1,10 @@
-
-
 services:
   redis:
     image: redis:alpine
     restart: always
 
   weather:
-    image: weather:latest
+    image: ghcr.io/cryzz2/weather-pyapp:latest
     build: .
     depends_on:
       - redis
